@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-toggle" type="button" aria-label="Open the menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Fluid Shaders 2D</span>
+    </a>
+    <nav class="toplinks" aria-label="Main">
+      <a href="{{ '/getting-started.html' | relative_url }}">Getting Started</a>
+      <a href="{{ '/troubleshooting.html' | relative_url }}">Troubleshooting</a>
+      <a class="demo-button" href="{{ '/demo/' | relative_url }}">
+        <span class="play" aria-hidden="true"></span>Try the web demo
+      </a>
+    </nav>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <nav id="site-nav" aria-label="Documentation">
+        <p class="nav-group">Start here</p>
+        <a href="{{ '/' | relative_url }}">Overview</a>
+        <a href="{{ '/getting-started.html' | relative_url }}">Getting Started</a>
+        <a href="{{ '/pipeline-setup.html' | relative_url }}">Pipeline Setup</a>
+        <a href="{{ '/demo-scenes.html' | relative_url }}">Demo Scenes</a>
+
+        <p class="nav-group"><span class="dot dot-water"></span>Water</p>
+        <a href="{{ '/water-effects.html' | relative_url }}">Water Effects</a>
+        <a href="{{ '/water-styles.html' | relative_url }}">Water Styles</a>
+
+        <p class="nav-group"><span class="dot dot-lava"></span>Lava</p>
+        <a href="{{ '/lava-effects.html' | relative_url }}">Lava Effects</a>
+        <a href="{{ '/lava-styles.html' | relative_url }}">Lava Styles</a>
+
+        <p class="nav-group"><span class="dot dot-toxic"></span>Acid &amp; Poison</p>
+        <a href="{{ '/toxic-effects.html' | relative_url }}">Toxic Effects</a>
+        <a href="{{ '/toxic-styles.html' | relative_url }}">Acid and Poison Styles</a>
+
+        <p class="nav-group">Reference</p>
+        <a href="{{ '/fluid-body.html' | relative_url }}">Fluid Body</a>
+        <a href="{{ '/physics.html' | relative_url }}">Physics</a>
+        <a href="{{ '/presets.html' | relative_url }}">Presets</a>
+        <a href="{{ '/performance.html' | relative_url }}">Performance</a>
+        <a href="{{ '/troubleshooting.html' | relative_url }}">Troubleshooting</a>
+      </nav>
+      <a class="sidebar-demo" href="{{ '/demo/' | relative_url }}">
+        <span class="play" aria-hidden="true"></span>
+        <span><strong>Web demo</strong><br>Every fluid, style and effect, live.</span>
+      </a>
+    </aside>
+
+    <main class="content">
+      {% if page.url == "/" or page.url == "/index.html" %}
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Unity · URP 2D · Water, Lava, Acid, Poison</p>
+          <h2 class="hero-title">Stylized 2D fluids that match your art.</h2>
+          <p class="hero-lead">Four ready fluids with physics and splashes, 25 style presets and every part of the look as a switch or a slider.</p>
+          <div class="hero-actions">
+            <a class="demo-button big" href="{{ '/demo/' | relative_url }}"><span class="play" aria-hidden="true"></span>Try the web demo</a>
+            <a class="ghost-button" href="{{ '/getting-started.html' | relative_url }}">Get started</a>
+          </div>
+        </div>
+        <div class="fluid-cards">
+          <a class="fluid-card" href="{{ '/water-styles.html' | relative_url }}"><img src="{{ '/Images/preset-realistic.png' | relative_url }}" alt=""><span>Water</span></a>
+          <a class="fluid-card" href="{{ '/lava-styles.html' | relative_url }}"><img src="{{ '/Images/lava-preset-realistic.png' | relative_url }}" alt=""><span>Lava</span></a>
+          <a class="fluid-card" href="{{ '/toxic-styles.html' | relative_url }}"><img src="{{ '/Images/acid-preset-painted.png' | relative_url }}" alt=""><span>Acid</span></a>
+          <a class="fluid-card" href="{{ '/toxic-styles.html#poison-cartoon' | relative_url }}"><img src="{{ '/Images/poison-preset-cartoon.png' | relative_url }}" alt=""><span>Poison</span></a>
+        </div>
+      </section>
+      {% endif %}
+
+      <div class="page">
+        <article class="markdown">
+          {{ content }}
+        </article>
+        <aside class="toc" id="toc" aria-label="On this page"></aside>
+      </div>
+
+      <nav class="pager" id="pager" aria-label="Previous and next page"></nav>
+
+      <footer class="footer">
+        Fluid Shaders 2D · Sebastian Escobar ·
+        <a href="{{ '/demo/' | relative_url }}">Web demo</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>
