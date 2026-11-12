@@ -1,0 +1,4 @@
+title: Fluid Shaders 2D
+description: Customizable 2D fluid shaders for Unity (URP 2D).
+theme: jekyll-theme-cayman
+exclude: ["*.meta"]
