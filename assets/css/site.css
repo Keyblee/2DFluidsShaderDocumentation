@@ -117,6 +117,11 @@ a:hover { text-decoration: underline; }
   border-right: 1px solid var(--border);
 }
 
+.sidebar, .toc { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+.sidebar::-webkit-scrollbar, .toc::-webkit-scrollbar { width: 8px; }
+.sidebar::-webkit-scrollbar-thumb, .toc::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+.sidebar::-webkit-scrollbar-track, .toc::-webkit-scrollbar-track { background: transparent; }
+
 #site-nav { display: flex; flex-direction: column; }
 #site-nav a {
   padding: 6px 10px; border-radius: 7px;
