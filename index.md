@@ -6,6 +6,8 @@ painted, realistic and flat styles all come from the same shaders.
 
 ![The Realistic style](Images/preset-realistic.png)
 
+**[Try the web demo](https://keyblee.github.io/2DFluidsShaderDocumentation/demo/)**: every fluid, style and effect, live in your browser (WebGL 2).
+
 ## What's in the pack
 
 - **Water shader** with ten switchable effects: surface waves, reflection, light rays, bubbles,
