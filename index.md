@@ -48,5 +48,7 @@ painted, realistic and flat styles all come from the same shaders.
 
 ## Support
 
+Online documentation: https://keyblee.github.io/2DFluidsShaderDocumentation/
+
 Questions or problems: use the contact on the Asset Store page. Please include your Unity
 version, render pipeline and a screenshot.
